@@ -1,0 +1,109 @@
+@dark-blue: #34495e;
+@body-bg: #e0e1e5;
+@white-color: #FFF;
+@icon-color: #dcdcdc;
+@btn-success: #03a9f4;
+@btn-success-hover: #2980b9;
+
+.radius {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+body {
+    background-color: @body-bg;
+    font-family: "Open Sans",sans-serif;
+    #login-box {
+        margin: 60px auto 20px;
+        max-width: 350px;
+        min-width: 280px;
+        overflow: hidden;
+        a {
+            color: @btn-success;
+        }
+        header {
+            background-color: @dark-blue;
+            padding: 35px 0;
+            text-align: center;
+            text-transform: uppercase;
+            color: @white-color;
+            font-size: 2em;
+        }
+        #login-box-inner {
+            background-color: @white-color;
+            padding: 40px 25px;
+            .input-group {
+                margin-bottom: 10px;
+                .input-group-addon, input {
+                    height: 44px;
+                    i {
+                        color: @icon-color;
+                    }
+                }
+            }
+            .checkbox-nice {
+                padding-top: 10px;
+                label {
+                    font-size: 0.875em;
+                    font-weight: 400;
+                    cursor: pointer;
+                    display: inline-block;
+                    margin-right: 15px;
+                    position: relative;
+                    padding-left: 30px;
+                    line-height: 24px;
+                    &::before {
+                        background-color: @white-color;
+                        content: "";
+                        display: inline-block;
+                        height: 25px;
+                        left: 0;
+                        margin-right: 10px;
+                        position: absolute;
+                        width: 25px;
+                        border: 2px solid @icon-color;
+                        line-height: 20px;
+                        .radius;
+                    }
+                }
+                input[type="checkbox"] {
+                    display: none;
+                }
+                input[type="checkbox"]:checked + label::before {
+                    color: @btn-success;
+                    content: "✓";
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 20px;
+                    text-align: center;
+                    height: 25px;
+                    width: 25px;
+                }
+                a {
+                    font-size: 12px;
+                    line-height: 26px;
+                }
+            }
+            .btn-success {
+                background-color: @btn-success;
+                margin: 15px 0;
+                padding: 10px 0;
+                font-size: 1.125em;
+                text-transform: uppercase;
+                font-weight: 600;
+                border-bottom: 2px solid @btn-success-hover;
+                &:hover {
+                    background-color: @btn-success-hover;
+                }
+            }
+            .social-btn {
+                padding-top: 15px;
+                .btn {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,314 @@
+body {
+    background-color: @body-bg;
+    .btn-success {
+        background-color: @btn-success;
+        border: none;
+        &:hover {
+            background-color: @btn-success-hover;
+        }
+    }
+    #themes {
+        background-color: @white-color;
+        border: 1px solid @icon-color;
+    }
+    #admin-panel {
+        background-color: @white-color;
+        header {
+            background-color: @btn-success;
+            .icon-bar {
+                background-color: @white-color;
+            }
+            #logo {
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+            a {
+                color: @white-color;
+                &:hover {
+                    background-color: @btn-success-hover;
+                }
+            }
+            .profile-dropdown {
+                a {
+                    img {
+                        border: 2px solid @white-color;
+                    }
+                }
+            }
+            .open {
+                a {
+                    background-color: @btn-success-hover;
+                }
+                .dropdown-menu {
+                    background-color: @white-color;
+                    border: 1px solid @icon-color;
+                    a {
+                        background-color: @white-color;
+                        color: @text-grey-color;
+                        &:hover {
+                            background-color: @content-area-bg;
+                        }
+                    }
+                    .item-footer a {
+                        background-color: @btn-success;
+                        color: @white-color;
+                    }
+                    .item {
+                        border-top: 1px solid @icon-color;
+                        i {
+                            color: @color-red;
+                        }
+                        .time {
+                            color: @btn-success;
+                            i {
+                                color: @btn-success;
+                            }
+                        }
+                    }
+                }
+            }
+            .mobile-search {
+                input[type="text"] {
+                    &:hover {
+                        background-color: @btn-success-hover;
+                    }
+                    &:focus {
+                        background-color: @white-color;
+                    }
+                }
+            }
+            span.count {
+                background-color: @color-red;
+                color: @white-color;
+            }
+        }
+        #user-left-box {
+            background-color: @white-color;
+            .profile-top {
+                .user-box {
+                    .name {
+                        a {
+                            color: @black-color;
+                        }
+                    }
+                    .status {
+                    }
+                }
+                .dropdown-menu {
+                }
+            }
+            .profile-detail {
+                a {
+                }
+                .padding-25 {
+                }
+                .activeOne {
+                    background-color: whitesmoke;
+                    a {
+                        color: @black-color;
+                    }
+                }
+                .panel-default {
+                    li {
+                        a {
+                            background-color: whitesmoke;
+                            color: @black-color;
+                            &:hover {
+                                background-color: whitesmoke;
+                            }
+                        }
+                    }
+                    ul {
+                        background-color: whitesmoke;
+                        li {
+                            a {
+                                &:hover {
+                                    background-color: @grey-hover;
+                                }
+                            }
+                        }
+                    }
+                    .collapsed {
+                        background-color: @white-color;
+                    }
+                }
+                .label-circle {
+                    background-color: @btn-success;
+                }
+            }
+        }
+        #content-wrapper {
+            background-color: @content-area-bg;
+            border-left: 2px solid @icon-color;
+            .header-bar {
+                h3 {
+                    color: @btn-success;
+                }
+                .breadcrumb {
+                    background-color: transparent;
+                    a {
+                        color: @black-color;
+                    }
+                }
+            }
+            .main-box {
+                border: 1px solid @icon-color;
+                background-color: @white-color;
+                .profile-stars {
+                    color: @star-color;
+                }
+                .user-profile-details {
+                    border-top: 1px solid @icon-color;
+                    border-bottom: 1px solid @icon-color;
+                    span {
+                        color: @btn-success;
+                    }
+                }
+                .checkboxNew , .radioNew {
+                    label {
+                        &:before {
+                            border: 1px solid @btn-success;
+                        }
+                    }
+                    input[type=checkbox],input[type=radio] {
+                        &:checked {
+                            &+label {
+                                &:before {
+                                    color: @dark-blue;
+                                }
+                            }
+                        }
+                    }
+                }
+                .pagination{
+                    a{
+                        color: @btn-success;
+                    }
+                    .active{
+                        a{
+                            background-color: @btn-success;
+                            border: @btn-success-hover;
+                            color: @white-color;
+                            line-height: 22px;
+                        }
+                    }
+
+                }
+                .upload-files{
+                    .file-input-new{
+
+                    }
+                    .file-input{
+                        .file-preview{
+                            .close{
+                                background-color: @btn-success;
+                                color: @white-color;
+                            }
+                            .file-actions{
+                                .kv-file-zoom{
+                                    background-color: @btn-success;
+                                    color: @white-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.bg-primary{
+    background-color: #5d9cec;
+    height: 95px;
+}
+.bg-primary-dark{
+    background-color: #2f80e7;
+    height: 93px;
+    padding-top: 22px;
+}
+.row-table{
+    display: table-cell;
+    vertical-align: middle;
+    table-layout: fixed;
+    height: 100%;
+    width:100%;
+}
+.bg-purple{
+    background-color: #7266ba;
+    height: 95px;
+    color: #fff;
+}
+.bg-purple-dark{
+    background-color: #564aa3;
+    height: 93px;
+    padding-top: 22px;
+}
+
+.bg-green{
+    background-color: #37bc9b;
+    height: 95px;
+    color: #fff;
+}
+.bg-green-dark{
+    background-color: #2b957a;
+    height: 93px;
+    padding-top: 22px;
+}
+
+.bg-red{
+    background-color: #c54b4b;
+    height: 95px;
+    color: #fff;
+}
+.bg-red-dark{
+    background-color: #ad3e3e;
+    height: 93px;
+    padding-top: 22px;
+}
+
+.panel{
+    cursor: pointer;
+}
+
+
+.login-page{
+    background-color: #e0e1e5;
+}
+
+#admin-panel{
+    background-color: #272d33 !important;
+}
+.row-offcanvas {
+    background-color: @sidebar-color !important;
+    .sidebar-offcanvas {
+        background-color: @sidebar-color !important;
+
+        .panel {
+            background-color: @sidebar-color !important;
+        }
+
+        .panel-default {
+            a {
+                color: @black-color !important;
+                background-color: @sidebar-color !important;
+                &:hover, &:active, &:focus {
+                    background-color: @sidebar-color !important;
+                }
+            }
+        }
+
+        .activeOne{
+            background-color: @sidebar-color !important;
+            a {
+                color: #FFFFFF !important;
+                background-color: @sidebar-color !important;
+                &:hover, &:active, &:focus {
+                    background-color: @sidebar-color !important;
+                }
+            }
+        }
+    }
+}

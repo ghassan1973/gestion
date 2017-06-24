@@ -1,0 +1,104 @@
+.radius {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+body {
+  background-color: #e0e1e5;
+  font-family: "Open Sans", sans-serif;
+}
+body #login-box {
+  margin: 60px auto 20px;
+  max-width: 350px;
+  min-width: 280px;
+  overflow: hidden;
+}
+body #login-box a {
+  color: #03a9f4;
+}
+body #login-box header {
+  background-color: #34495e;
+  padding: 35px 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFF;
+  font-size: 2em;
+}
+body #login-box #login-box-inner {
+  background-color: #FFF;
+  padding: 40px 25px;
+}
+body #login-box #login-box-inner .input-group {
+  margin-bottom: 10px;
+}
+body #login-box #login-box-inner .input-group .input-group-addon,
+body #login-box #login-box-inner .input-group input {
+  height: 44px;
+}
+body #login-box #login-box-inner .input-group .input-group-addon i,
+body #login-box #login-box-inner .input-group input i {
+  color: #dcdcdc;
+}
+body #login-box #login-box-inner .checkbox-nice {
+  padding-top: 10px;
+}
+body #login-box #login-box-inner .checkbox-nice label {
+  font-size: 0.875em;
+  font-weight: 400;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 15px;
+  position: relative;
+  padding-left: 30px;
+  line-height: 24px;
+}
+body #login-box #login-box-inner .checkbox-nice label::before {
+  background-color: #FFF;
+  content: "";
+  display: inline-block;
+  height: 25px;
+  left: 0;
+  margin-right: 10px;
+  position: absolute;
+  width: 25px;
+  border: 2px solid #dcdcdc;
+  line-height: 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+body #login-box #login-box-inner .checkbox-nice input[type="checkbox"] {
+  display: none;
+}
+body #login-box #login-box-inner .checkbox-nice input[type="checkbox"]:checked + label::before {
+  color: #03a9f4;
+  content: "✓";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+  height: 25px;
+  width: 25px;
+}
+body #login-box #login-box-inner .checkbox-nice a {
+  font-size: 12px;
+  line-height: 26px;
+}
+body #login-box #login-box-inner .btn-success {
+  background-color: #03a9f4;
+  margin: 15px 0;
+  padding: 10px 0;
+  font-size: 1.125em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-bottom: 2px solid #2980b9;
+}
+body #login-box #login-box-inner .btn-success:hover {
+  background-color: #2980b9;
+}
+body #login-box #login-box-inner .social-btn {
+  padding-top: 15px;
+}
+body #login-box #login-box-inner .social-btn .btn {
+  width: 100%;
+}

@@ -1,0 +1,349 @@
+body {
+  background-color: #e0e1e5;
+}
+body .btn-success {
+  background-color: #03a9f4;
+  border: none;
+}
+body .btn-success:hover {
+  background-color: #2980b9;
+}
+body #themes {
+  background-color: #FFF;
+  border: 1px solid #dcdcdc;
+}
+body #admin-panel {
+  background-color: #FFF;
+}
+body #admin-panel header {
+  background-color: #03a9f4;
+}
+body #admin-panel header .icon-bar {
+  background-color: #FFF;
+}
+body #admin-panel header #logo:hover {
+  background-color: transparent;
+}
+body #admin-panel header a {
+  color: #FFF;
+}
+body #admin-panel header a:hover {
+  background-color: #2980b9;
+}
+body #admin-panel header .profile-dropdown a img {
+  border: 2px solid #FFF;
+}
+body #admin-panel header .open a {
+  background-color: #2980b9;
+}
+body #admin-panel header .open .dropdown-menu {
+  background-color: #FFF;
+  border: 1px solid #dcdcdc;
+}
+body #admin-panel header .open .dropdown-menu a {
+  background-color: #FFF;
+  color: #707070;
+}
+body #admin-panel header .open .dropdown-menu a:hover {
+  background-color: #f9f9f9;
+}
+body #admin-panel header .open .dropdown-menu .item-footer a {
+  background-color: #03a9f4;
+  color: #FFF;
+}
+body #admin-panel header .open .dropdown-menu .item {
+  border-top: 1px solid #dcdcdc;
+}
+body #admin-panel header .open .dropdown-menu .item i {
+  color: #e84e40;
+}
+body #admin-panel header .open .dropdown-menu .item .time {
+  color: #03a9f4;
+}
+body #admin-panel header .open .dropdown-menu .item .time i {
+  color: #03a9f4;
+}
+body #admin-panel header .mobile-search input[type="text"]:hover {
+  background-color: #2980b9;
+}
+body #admin-panel header .mobile-search input[type="text"]:focus {
+  background-color: #FFF;
+}
+body #admin-panel header span.count {
+  background-color: #e84e40;
+  color: #FFF;
+}
+body #admin-panel #user-left-box {
+  background-color: #FFF;
+}
+body #admin-panel #user-left-box .profile-top .user-box .name a {
+  color: #484848;
+}
+body #admin-panel #user-left-box .profile-detail .activeOne {
+  background-color: whitesmoke;
+}
+body #admin-panel #user-left-box .profile-detail .activeOne a {
+  color: #484848;
+}
+body #admin-panel #user-left-box .profile-detail .panel-default li a {
+  background-color: whitesmoke;
+  color: #484848;
+}
+body #admin-panel #user-left-box .profile-detail .panel-default li a:hover {
+  background-color: whitesmoke;
+}
+body #admin-panel #user-left-box .profile-detail .panel-default ul {
+  background-color: whitesmoke;
+}
+body #admin-panel #user-left-box .profile-detail .panel-default ul li a:hover {
+  background-color: #ebebeb;
+}
+body #admin-panel #user-left-box .profile-detail .panel-default .collapsed {
+  background-color: #FFF;
+}
+body #admin-panel #user-left-box .profile-detail .label-circle {
+  background-color: #03a9f4;
+}
+body #admin-panel #content-wrapper {
+  background-color: #f9f9f9;
+  border-left: 2px solid #dcdcdc;
+}
+body #admin-panel #content-wrapper .header-bar h3 {
+  color: #03a9f4;
+}
+body #admin-panel #content-wrapper .header-bar .breadcrumb {
+  background-color: transparent;
+}
+body #admin-panel #content-wrapper .header-bar .breadcrumb a {
+  color: #484848;
+}
+body #admin-panel #content-wrapper .main-box {
+  border: 1px solid #dcdcdc;
+  background-color: #FFF;
+}
+body #admin-panel #content-wrapper .main-box .profile-stars {
+  color: #faba03;
+}
+body #admin-panel #content-wrapper .main-box .user-profile-details {
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+}
+body #admin-panel #content-wrapper .main-box .user-profile-details span {
+  color: #03a9f4;
+}
+body #admin-panel #content-wrapper .main-box .checkboxNew label:before,
+body #admin-panel #content-wrapper .main-box .radioNew label:before {
+  border: 1px solid #03a9f4;
+}
+body #admin-panel #content-wrapper .main-box .checkboxNew input[type=checkbox]:checked + label:before,
+body #admin-panel #content-wrapper .main-box .radioNew input[type=checkbox]:checked + label:before,
+body #admin-panel #content-wrapper .main-box .checkboxNew input[type=radio]:checked + label:before,
+body #admin-panel #content-wrapper .main-box .radioNew input[type=radio]:checked + label:before {
+  color: #34495e;
+}
+body #admin-panel #content-wrapper .main-box .pagination a {
+  color: #03a9f4;
+}
+body #admin-panel #content-wrapper .main-box .pagination .active a {
+  background-color: #03a9f4;
+  border: #2980b9;
+  color: #FFF;
+  line-height: 22px;
+}
+body #admin-panel #content-wrapper .main-box .upload-files .file-input .file-preview .close {
+  background-color: #03a9f4;
+  color: #FFF;
+}
+body #admin-panel #content-wrapper .main-box .upload-files .file-input .file-preview .file-actions .kv-file-zoom {
+  background-color: #03a9f4;
+  color: #FFF;
+}
+.bg-primary {
+  background-color: #5d9cec;
+  height: 95px;
+}
+.bg-primary-dark {
+  background-color: #2f80e7;
+  height: 93px;
+  padding-top: 22px;
+}
+.row-table {
+  display: table-cell;
+  vertical-align: middle;
+  table-layout: fixed;
+  height: 100%;
+  width: 100%;
+}
+.bg-purple {
+  background-color: #7266ba;
+  height: 95px;
+  color: #fff;
+}
+.bg-purple-dark {
+  background-color: #564aa3;
+  height: 93px;
+  padding-top: 22px;
+}
+.bg-green {
+  background-color: #37bc9b;
+  height: 95px;
+  color: #fff;
+}
+.bg-green-dark {
+  background-color: #2b957a;
+  height: 93px;
+  padding-top: 22px;
+}
+.bg-red {
+  background-color: #c54b4b;
+  height: 95px;
+  color: #fff;
+}
+.bg-red-dark {
+  background-color: #ad3e3e;
+  height: 93px;
+  padding-top: 22px;
+}
+.panel {
+  cursor: pointer;
+}
+.login-page {
+  background-color: #e0e1e5;
+}
+#admin-panel {
+  background-color: #272d33 !important;
+}
+.row-offcanvas {
+  background-color: #fff !important;
+}
+.row-offcanvas .sidebar-offcanvas {
+  background-color: #fff !important;
+}
+.row-offcanvas .sidebar-offcanvas .panel {
+  background-color: #fff !important;
+}
+.row-offcanvas .sidebar-offcanvas .panel-default a {
+  color: #484848 !important;
+  background-color: #fff !important;
+}
+.row-offcanvas .sidebar-offcanvas .panel-default a:hover,
+.row-offcanvas .sidebar-offcanvas .panel-default a:active,
+.row-offcanvas .sidebar-offcanvas .panel-default a:focus {
+  background-color: #fff !important;
+}
+.row-offcanvas .sidebar-offcanvas .activeOne {
+  background-color: #fff !important;
+}
+.row-offcanvas .sidebar-offcanvas .activeOne a {
+  color: #FFFFFF !important;
+  background-color: #fff !important;
+}
+.row-offcanvas .sidebar-offcanvas .activeOne a:hover,
+.row-offcanvas .sidebar-offcanvas .activeOne a:active,
+.row-offcanvas .sidebar-offcanvas .activeOne a:focus {
+  background-color: #fff !important;
+}
+.radius {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+body {
+  background-color: #e0e1e5;
+  font-family: "Open Sans", sans-serif;
+}
+body #login-box {
+  margin: 60px auto 20px;
+  max-width: 350px;
+  min-width: 280px;
+  overflow: hidden;
+}
+body #login-box a {
+  color: #03a9f4;
+}
+body #login-box header {
+  background-color: #34495e;
+  padding: 35px 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFF;
+  font-size: 2em;
+}
+body #login-box #login-box-inner {
+  background-color: #FFF;
+  padding: 40px 25px;
+}
+body #login-box #login-box-inner .input-group {
+  margin-bottom: 10px;
+}
+body #login-box #login-box-inner .input-group .input-group-addon,
+body #login-box #login-box-inner .input-group input {
+  height: 44px;
+}
+body #login-box #login-box-inner .input-group .input-group-addon i,
+body #login-box #login-box-inner .input-group input i {
+  color: #dcdcdc;
+}
+body #login-box #login-box-inner .checkbox-nice {
+  padding-top: 10px;
+}
+body #login-box #login-box-inner .checkbox-nice label {
+  font-size: 0.875em;
+  font-weight: 400;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 15px;
+  position: relative;
+  padding-left: 30px;
+  line-height: 24px;
+}
+body #login-box #login-box-inner .checkbox-nice label::before {
+  background-color: #FFF;
+  content: "";
+  display: inline-block;
+  height: 25px;
+  left: 0;
+  margin-right: 10px;
+  position: absolute;
+  width: 25px;
+  border: 2px solid #dcdcdc;
+  line-height: 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+body #login-box #login-box-inner .checkbox-nice input[type="checkbox"] {
+  display: none;
+}
+body #login-box #login-box-inner .checkbox-nice input[type="checkbox"]:checked + label::before {
+  color: #03a9f4;
+  content: "✓";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+  height: 25px;
+  width: 25px;
+}
+body #login-box #login-box-inner .checkbox-nice a {
+  font-size: 12px;
+  line-height: 26px;
+}
+body #login-box #login-box-inner .btn-success {
+  background-color: #03a9f4;
+  margin: 15px 0;
+  padding: 10px 0;
+  font-size: 1.125em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-bottom: 2px solid #2980b9;
+}
+body #login-box #login-box-inner .btn-success:hover {
+  background-color: #2980b9;
+}
+body #login-box #login-box-inner .social-btn {
+  padding-top: 15px;
+}
+body #login-box #login-box-inner .social-btn .btn {
+  width: 100%;
+}
