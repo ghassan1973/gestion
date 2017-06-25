@@ -41,7 +41,7 @@
 														Name</label> <input type="text" name="TransactionName"
 														class="form-control" id="transaction_name_input"
 														placeholder="Enter TransactionName"
-														value="${transaction.transactionName}" />
+														value="${transaction.transactionName}" autofocus/>
 												</div>
 											</div>
 

@@ -49,19 +49,19 @@ public class Project {
 
 	@Column(name="cost")
 
-	private Integer cost;
+	private Double cost;
 
 	@Column(name="sale")
 
-	private Integer sale;
+	private Double sale;
 
 	@Column(name="rest_to_pay")
 
-	private Integer restToPay;
+	private Double restToPay;
 
 	@Column(name="margin")
 
-	private Integer margin;
+	private Double margin;
 
 
 	@OneToMany(mappedBy="project")
@@ -147,7 +147,7 @@ public class Project {
 	/**
 	 *
 	 */
-	public Integer getCost()
+	public Double getCost()
 	{
 		return this.cost;
 	}
@@ -156,14 +156,14 @@ public class Project {
 	/**
 	 *
 	 */
-	public void setCost(Integer _cost)
+	public void setCost(Double _cost)
 	{
 		this.cost = _cost;
 	}
 	/**
 	 *
 	 */
-	public Integer getSale()
+	public Double getSale()
 	{
 		return this.sale;
 	}
@@ -172,14 +172,14 @@ public class Project {
 	/**
 	 *
 	 */
-	public void setSale(Integer _sale)
+	public void setSale(Double _sale)
 	{
 		this.sale = _sale;
 	}
 	/**
 	 *
 	 */
-	public Integer getRestToPay()
+	public Double getRestToPay()
 	{
 		return this.restToPay;
 	}
@@ -188,14 +188,14 @@ public class Project {
 	/**
 	 *
 	 */
-	public void setRestToPay(Integer _restToPay)
+	public void setRestToPay(Double _restToPay)
 	{
 		this.restToPay = _restToPay;
 	}
 	/**
 	 *
 	 */
-	public Integer getMargin()
+	public Double getMargin()
 	{
 		return this.margin;
 	}
@@ -204,7 +204,7 @@ public class Project {
 	/**
 	 *
 	 */
-	public void setMargin(Integer _margin)
+	public void setMargin(Double _margin)
 	{
 		this.margin = _margin;
 	}

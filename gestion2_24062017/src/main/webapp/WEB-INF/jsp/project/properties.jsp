@@ -11,16 +11,14 @@
 			<div class="row row-offcanvas row-offcanvas-left">
 				<jsp:include page="./../sidebar.jsp" />
 				<!-- Content-->
-				<div class="col-xs-12 col-sm-8 col-md-9 col-lg-10"
-					id="content-wrapper">
+				<div class="col-xs-12 col-sm-8 col-md-9 col-lg-12">
 					<div class="row">
 						<div class="col-lg-12 header-bar">
 							<ol class="breadcrumb">
 								<li><a href="${pageContext.request.contextPath}/home">Home</a></li>
 								<li><a href="${pageContext.request.contextPath}/project">Project</a></li>
-								<li class="active"><span>Create Project</span></li>
+								<li class="active"><span>Properties</span></li>
 							</ol>
-							<h3>Create Project</h3>
 						</div>
 					</div>
 					<div class="main-box">
@@ -32,14 +30,14 @@
 								<div class="col-md-12">
 									<div class="row">
 										<div class="col-lg-12">
-
 											<div class="col-md-6">
 												<div class="form-group">
-													<label for="txt_projectname" class="small">Project
-														Name</label> <input type="text" name="ProjectName"
-														class="form-control" id="project_name_input"
-														placeholder="Enter ProjectName"
-														value="${project.projectName}" />
+													<label for="txt_projectname" class="small"> Name <span
+														class="obligatoire" style="color: red">*</span></label> <input
+														type="text" name="ProjectName" class="form-control"
+														id="project_name_input" placeholder="Enter Project Name"
+														value="${project.projectName}" autofocus required
+														 />
 												</div>
 											</div>
 
@@ -48,6 +46,7 @@
 													<label for="sel_region" class="small">Region</label> <select
 														class="form-control custom" name="region_rel"
 														id="region_dropdown">
+														<option></option>
 														<c:forEach items="${all_region}" var="item">
 															<option value="${item.regionId}"
 																${fn:contains(project.region, item) ? 'selected' : ''}>${item.regionName}</option>
@@ -55,13 +54,14 @@
 													</select>
 												</div>
 											</div>
-
-
+										</div>
+										<div class="col-lg-12">
 											<div class="col-md-6">
 												<div class="form-group" id="projectType_dropdown_parent">
-													<label for="sel_projecttype" class="small">ProjectType</label>
-													<select class="form-control custom" name="projectType_rel"
+													<label for="sel_projecttype" class="small">Type</label> <select
+														class="form-control custom" name="projectType_rel"
 														id="projectType_dropdown">
+														<option></option>
 														<c:forEach items="${all_projectType}" var="item">
 															<option value="${item.projectTypeId}"
 																${fn:contains(project.projectType, item) ? 'selected' : ''}>${item.projectTypeName}</option>
@@ -70,12 +70,12 @@
 												</div>
 											</div>
 
-
 											<div class="col-md-6">
 												<div class="form-group" id="status_dropdown_parent">
-													<label for="sel_status" class="small">ProjectStatus</label>
-													<select class="form-control custom"
-														name="projectStatus_rel" id="status_dropdown">
+													<label for="sel_status" class="small">Status</label> <select
+														class="form-control custom" name="projectStatus_rel"
+														id="status_dropdown">
+														<option></option>
 														<c:forEach items="${all_projectStatus}" var="item">
 															<option value="${item.projectStatusId}"
 																${fn:contains(project.projectStatus, item) ? 'selected' : ''}>${item.projectStatusName}</option>
@@ -90,7 +90,8 @@
 													<label for="txt_startdate" class="small">Start Date</label>
 													<input type="text" name="StartDate"
 														class="form-control datetimepicker" id="start_date_input"
-														placeholder="Enter StartDate" value="${project.startDate}" />
+														placeholder="Enter Start Date"
+														value="${project.startDate}" />
 												</div>
 											</div>
 
@@ -99,7 +100,7 @@
 													<label for="txt_enddate" class="small">End Date</label> <input
 														type="text" name="EndDate"
 														class="form-control datetimepicker" id="end_date_input"
-														placeholder="Enter EndDate" value="${project.endDate}" />
+														placeholder="Enter End Date" value="${project.endDate}" />
 												</div>
 											</div>
 
@@ -108,7 +109,8 @@
 													<label for="txt_cost" class="small">Cost</label> <input
 														type="text" name="Cost" class="form-control"
 														id="cost_input" placeholder="Enter Cost"
-														value="${project.cost}" />
+														value="${project.cost}"
+														pattern="[-+]?[0-9]*[.,]?[0-9]*[.]?[0-9]+" />
 												</div>
 											</div>
 
@@ -117,7 +119,8 @@
 													<label for="txt_sale" class="small">Sale</label> <input
 														type="text" name="Sale" class="form-control"
 														id="sale_input" placeholder="Enter Sale"
-														value="${project.sale}" />
+														value="${project.sale}"
+														pattern="[-+]?[0-9]*[.,]?[0-9]*[.]?[0-9]+" />
 												</div>
 											</div>
 
@@ -126,7 +129,9 @@
 													<label for="txt_resttopay" class="small">Rest To
 														Pay</label> <input type="text" name="RestToPay"
 														class="form-control" id="rest_to_pay_input"
-														placeholder="Enter RestToPay" value="${project.restToPay}" />
+														placeholder="Enter Rest To Pay"
+														value="${project.restToPay}"
+														pattern="[-+]?[0-9]*[.,]?[0-9]*[.]?[0-9]+" />
 												</div>
 											</div>
 
@@ -135,22 +140,28 @@
 													<label for="txt_margin" class="small">Margin</label> <input
 														type="text" name="Margin" class="form-control"
 														id="margin_input" placeholder="Enter Margin"
-														value="${project.margin}" />
+														value="${project.margin}"
+														pattern="[-+]?[0-9]*[.,]?[0-9]*[.]?[0-9]+" />
 												</div>
 											</div>
-
-
-
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<br /> <br /> <br />
 										</div>
 									</div>
 								</div>
-
-
-								<div class="box-footer col-md-12 pull-right">
+								<div class="box-footer col-md-1.5 pull-right">
 									<a type="submit" class="btn btn-info"
 										href="${pageContext.request.contextPath}/project">Cancel</a>
 									<button type="submit" class="btn btn-primary"
-										id="save_project_btn">Submit</button>
+										id="save_project_btn">Apply</button>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<br />
+									</div>
 								</div>
 							</form:form>
 						</div>
@@ -159,7 +170,6 @@
 			</div>
 		</div>
 	</div>
-
 	<jsp:include page="./../include_js.jsp" />
 </body>
 </html>

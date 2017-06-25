@@ -36,7 +36,7 @@
 												<label for="txt_transactionname" class="small">Transaction
 													Name</label> <input type="text" placeholder="Transaction Name"
 													class="form-control" id="txt_transactionname"
-													name="TransactionName" value="${model.transactionName}">
+													name="TransactionName" value="${model.transactionName}" autofocus />
 											</div>
 
 
