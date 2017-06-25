@@ -11,16 +11,13 @@
 			<div class="row row-offcanvas row-offcanvas-left">
 				<jsp:include page="./../sidebar.jsp" />
 				<!-- Content-->
-				<div class="col-xs-12 col-sm-8 col-md-9 col-lg-10"
-					id="content-wrapper">
+				<div class="col-xs-12 col-sm-8 col-md-9 col-lg-12">
 					<div class="row">
 						<div class="col-lg-12 header-bar">
 							<ol class="breadcrumb">
 								<li><a href="${pageContext.request.contextPath}/home">Home</a></li>
-								<li><a href="${pageContext.request.contextPath}/order">Order</a></li>
-								<li class="active"><span>Create Order</span></li>
+								<li class="active"><span>Order</span></li>
 							</ol>
-							<h3>Create Order</h3>
 						</div>
 					</div>
 					<div class="main-box">
@@ -35,19 +32,19 @@
 
 											<div class="col-md-6">
 												<div class="form-group">
-													<label for="txt_ordername" class="small">Order Name</label>
+													<label for="txt_ordername" class="small">Name <span class="obligatoire" style="color: red">*</span></label>
 													<input type="text" name="OrderName" class="form-control"
-														id="order_name_input" placeholder="Enter OrderName"
-														value="${order.orderName}" />
+														id="order_name_input" placeholder="Enter Name"
+														value="${order.orderName}" autofocus required/>
 												</div>
 											</div>
 
 											<div class="col-md-6">
 												<div class="form-group">
-													<label for="txt_date" class="small">Date</label> <input
+													<label for="txt_date" class="small">Date <span class="obligatoire" style="color: red">*</span></label> <input
 														type="text" name="Date"
 														class="form-control datetimepicker" id="date_input"
-														placeholder="Enter Date" value="${order.date}" />
+														placeholder="Enter Date" value="${order.date}" required/>
 												</div>
 											</div>
 
@@ -85,6 +82,7 @@
 													<label for="sel_project" class="small">Project</label> <select
 														class="form-control custom" name="project_rel"
 														id="project_dropdown">
+														<option></option>
 														<c:forEach items="${all_project}" var="item">
 															<option value="${item.projectId}"
 																${fn:contains(order.project, item) ? 'selected' : ''}>${item.projectName}</option>
@@ -94,11 +92,14 @@
 											</div>
 
 
+										</div>
+										<div class="col-lg-12">
 											<div class="col-md-6">
 												<div class="form-group" id="tier_dropdown_parent">
 													<label for="sel_tier" class="small">Tier</label> <select
 														class="form-control custom" name="tier_rel"
 														id="tier_dropdown">
+														<option></option>
 														<c:forEach items="${all_tier}" var="item">
 															<option value="${item.tierId}"
 																${fn:contains(order.tier, item) ? 'selected' : ''}>${item.tierName}</option>
@@ -106,22 +107,24 @@
 													</select>
 												</div>
 											</div>
-
-
-
-
-
-
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="form-group">
+											<br /> <br /> <br /> <br /> <br /> <br />
 										</div>
 									</div>
 								</div>
-
-
-								<div class="box-footer col-md-12 pull-right">
+								<div class="box-footer col-md-1.5 pull-right">
 									<a type="submit" class="btn btn-info"
 										href="${pageContext.request.contextPath}/order">Cancel</a>
 									<button type="submit" class="btn btn-primary"
-										id="save_order_btn">Submit</button>
+										id="save_order_btn">Apply</button>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<br />
+									</div>
 								</div>
 							</form:form>
 						</div>
