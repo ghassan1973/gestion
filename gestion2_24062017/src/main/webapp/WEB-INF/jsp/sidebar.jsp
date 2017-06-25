@@ -1,5 +1,5 @@
-<ul class="nav nav-tabs  navbar-inverse">
-	<li><a href="${pageContext.request.contextPath}/n"
+<ul class="nav nav-tabs navbar-inverse">
+	<li><a href="${pageContext.request.contextPath}/home"
 		id="transaction_sidebar_list_link">Dashboard</a></li>
 	<li><a href="${pageContext.request.contextPath}/transaction"
 		id="transaction_sidebar_list_link">Transaction</a></li>

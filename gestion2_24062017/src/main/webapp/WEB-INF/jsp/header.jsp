@@ -1,6 +1,6 @@
 <header>
-	<div role="navigation" class="container-fluid">
-		<a class="navbar-brand" id="logo" href="index.html"> Gestion </a>
+	<div role="navigation" class="container-fluid navbar-inverse">
+		<a class="navbar-brand" id="logo" href="index.html"><i class="fa fa-bar-chart fa-2x" aria-hidden="true"></i> NETSYS2I </a>
 		<div class="clearfix">
 			<button type="button" class="navbar-toggle" data-toggle="offcanvas"
 				data-target=".sidebar-nav">

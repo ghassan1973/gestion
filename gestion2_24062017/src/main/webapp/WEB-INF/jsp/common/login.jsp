@@ -8,7 +8,7 @@
 				<div id="login-box">
 					<div class="row">
 						<div class="col-xs-12">
-							<header> Gestion2 </header>
+							<header> Gestion </header>
 							<div id="login-box-inner">
 								<form
 									action="${pageContext.request.contextPath}/login/authenticate"
@@ -28,8 +28,8 @@
 									</div>
 									<div class="row">
 										<div class="col-xs-12">
-											<div class="checkbox-nice">
-												<input type="checkbox" checked="checked" id="terms-cond">
+											<div class="checkbox-nice ">
+												<input type="checkbox" id="terms-cond">
 												<label for="terms-cond">Remember me</label> <a
 													class="pull-right"
 													href="${pageContext.request.contextPath}/signin/forgot_password">Forgot
