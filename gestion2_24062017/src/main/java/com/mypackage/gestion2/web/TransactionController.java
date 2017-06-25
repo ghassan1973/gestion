@@ -92,7 +92,7 @@ public class TransactionController extends BaseCrudController<Transaction>{
 				modelMap.put("all_currency",currencyService.listAll());
 				modelMap.put("all_modePayment",modePaymentService.listAll());
 		
-		return new ModelAndView(getViewFolder() + "/create",modelMap);
+		return new ModelAndView(getViewFolder() + "/properties",modelMap);
 	}
 
 	@RequestMapping(value = "{id}/edit", method = RequestMethod.GET)
@@ -110,7 +110,7 @@ public class TransactionController extends BaseCrudController<Transaction>{
 		
 		modelMap.put("transaction",transaction);
 
-		return new ModelAndView(getViewFolder() + "/create",modelMap);
+		return new ModelAndView(getViewFolder() + "/properties",modelMap);
 	}
 
 
