@@ -135,5 +135,6 @@
 	</div>
 
 	<jsp:include page="./../include_js.jsp" />
+	
 </body>
 </html>
