@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
 <ul class="nav nav-tabs navbar-inverse">
 	<li><a href="${pageContext.request.contextPath}/home"
 		id="transaction_sidebar_list_link">Dashboard</a></li>
@@ -9,11 +10,12 @@
 		id="order_sidebar_list_link">Order</a></li>
 	<li><a href="${pageContext.request.contextPath}/tier"
 		id="tier_sidebar_list_link">Tier</a></li>
+			
 	<li role="presentation" class="dropdown"><a
 		class="dropdown-toggle" data-toggle="dropdown" href="#" role="button"
 		aria-haspopup="true" aria-expanded="false"> <i class="fa fa-cog"></i> Settings <span
 			class="caret"></span>
-	</a>
+	</a>		
 		<ul class="dropdown-menu">
 			<li><a href="${pageContext.request.contextPath}/user"
 				id="user_sidebar_list_link"><i class="fa fa-user fa-fw"></i> User</a></li>
@@ -41,4 +43,24 @@
 				id="orderlines_sidebar_list_link">Order Lines</a></li>
 		</ul>
 	</li>
+	<li role="presentation" class="dropdown"><a
+		class="dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+		aria-haspopup="true" aria-expanded="false"> <i class="fa fa-cog"></i> Reporting <span
+			class="caret"></span>
+		</a>
+			
+		<ul class="dropdown-menu">
+			<li><a href="${pageContext.request.contextPath}/reportprojectsupplierout"
+				id="user_sidebar_list_link"><i class="fa fa-user fa-fw"></i> Supplier's payments</a></li>
+				
+			<li><a href="${pageContext.request.contextPath}/reportcustomerin"
+				id="role_sidebar_list_link">Customer's payments</a></li>
+				
+			<li><a href="${pageContext.request.contextPath}/reportorderinout"
+				id="family_sidebar_list_link">All in/out transactions</a></li>
+				
+				<li><a href="${pageContext.request.contextPath}/reportprojectinout"
+				id="permission_sidebar_list_link">All in/out transactions by project</a></li>
+		</ul>
+		</li>
 </ul>

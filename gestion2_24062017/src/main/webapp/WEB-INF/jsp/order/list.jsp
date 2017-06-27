@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <jsp:include page="./../head.jsp" />
@@ -32,7 +33,8 @@
 										<th class="small">Balance</th>
 										<th colspan=2><a
 											href="${pageContext.request.contextPath}/order/create"
-											class="btn btn-info pull-right">+</a></th>
+											class="btn btn-info pull-right"><span
+												class="glyphicon glyphicon-plus"></span>&nbsp;</a></th>
 									</tr>
 								</thead>
 								<tbody>

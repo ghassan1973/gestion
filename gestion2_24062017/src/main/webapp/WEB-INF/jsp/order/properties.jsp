@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
@@ -32,19 +33,22 @@
 
 											<div class="col-md-6">
 												<div class="form-group">
-													<label for="txt_ordername" class="small">Name <span class="obligatoire" style="color: red">*</span></label>
-													<input type="text" name="OrderName" class="form-control"
+													<label for="txt_ordername" class="small">Name <span
+														class="obligatoire" style="color: red">*</span></label> <input
+														type="text" name="OrderName" class="form-control"
 														id="order_name_input" placeholder="Enter Name"
-														value="${order.orderName}" autofocus required/>
+														value="${order.orderName}" autofocus required />
 												</div>
 											</div>
 
 											<div class="col-md-6">
 												<div class="form-group">
-													<label for="txt_date" class="small">Date <span class="obligatoire" style="color: red">*</span></label> <input
+													<label for="txt_date" class="small">Date <span
+														class="obligatoire" style="color: red">*</span></label> <input
 														type="text" name="Date"
 														class="form-control datetimepicker" id="date_input"
-														placeholder="Enter Date" value="${order.date}" required/>
+														placeholder="Enter Date" value="${order.date}" autofocus
+														required />
 												</div>
 											</div>
 
@@ -79,9 +83,10 @@
 
 											<div class="col-md-6">
 												<div class="form-group" id="project_dropdown_parent">
-													<label for="sel_project" class="small">Project</label> <select
+													<label for="sel_project" class="small">Project <span
+														class="obligatoire" style="color: red">*</span></label> <select
 														class="form-control custom" name="project_rel"
-														id="project_dropdown">
+														id="project_dropdown" autofocus required>
 														<option></option>
 														<c:forEach items="${all_project}" var="item">
 															<option value="${item.projectId}"
@@ -96,9 +101,10 @@
 										<div class="col-lg-12">
 											<div class="col-md-6">
 												<div class="form-group" id="tier_dropdown_parent">
-													<label for="sel_tier" class="small">Tier</label> <select
+													<label for="sel_tier" class="small">Tier <span
+														class="obligatoire" style="color: red">*</span></label> <select
 														class="form-control custom" name="tier_rel"
-														id="tier_dropdown">
+														id="tier_dropdown" autofocus required>
 														<option></option>
 														<c:forEach items="${all_tier}" var="item">
 															<option value="${item.tierId}"
@@ -116,10 +122,12 @@
 									</div>
 								</div>
 								<div class="box-footer col-md-1.5 pull-right">
-									<a type="submit" class="btn btn-info"
-										href="${pageContext.request.contextPath}/order">Cancel</a>
+									<a type="button" class="btn btn-info"
+										href="${pageContext.request.contextPath}/order">Cancel
+									</a>
 									<button type="submit" class="btn btn-primary"
-										id="save_order_btn">Apply</button>
+										id="save_order_btn">Apply</span>&nbsp;
+									</button>
 								</div>
 								<div class="col-md-12">
 									<div class="form-group">
@@ -135,6 +143,6 @@
 	</div>
 
 	<jsp:include page="./../include_js.jsp" />
-	
+
 </body>
 </html>

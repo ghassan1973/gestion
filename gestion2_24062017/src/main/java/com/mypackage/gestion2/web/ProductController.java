@@ -82,7 +82,7 @@ public class ProductController extends BaseCrudController<Product>{
 				
 				modelMap.put("all_family",familyService.listAll());
 		
-		return new ModelAndView(getViewFolder() + "/create",modelMap);
+		return new ModelAndView(getViewFolder() + "/properties",modelMap);
 	}
 
 	@RequestMapping(value = "{id}/edit", method = RequestMethod.GET)
@@ -98,7 +98,7 @@ public class ProductController extends BaseCrudController<Product>{
 		
 		modelMap.put("product",product);
 
-		return new ModelAndView(getViewFolder() + "/create",modelMap);
+		return new ModelAndView(getViewFolder() + "/properties",modelMap);
 	}
 
 

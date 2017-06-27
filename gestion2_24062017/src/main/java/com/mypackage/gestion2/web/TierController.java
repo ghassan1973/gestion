@@ -82,7 +82,7 @@ public class TierController extends BaseCrudController<Tier>{
 				
 				modelMap.put("all_familyTier",familyTierService.listAll());
 		
-		return new ModelAndView(getViewFolder() + "/create",modelMap);
+		return new ModelAndView(getViewFolder() + "/properties",modelMap);
 	}
 
 	@RequestMapping(value = "{id}/edit", method = RequestMethod.GET)
@@ -98,7 +98,7 @@ public class TierController extends BaseCrudController<Tier>{
 		
 		modelMap.put("tier",tier);
 
-		return new ModelAndView(getViewFolder() + "/create",modelMap);
+		return new ModelAndView(getViewFolder() + "/properties",modelMap);
 	}
 
 

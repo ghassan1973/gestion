@@ -87,7 +87,7 @@ public class OrderLinesController extends BaseCrudController<OrderLines>{
 				modelMap.put("all_product",productService.listAll());
 				modelMap.put("all_order",orderService.listAll());
 		
-		return new ModelAndView(getViewFolder() + "/create",modelMap);
+		return new ModelAndView(getViewFolder() + "/properties",modelMap);
 	}
 
 	@RequestMapping(value = "{id}/edit", method = RequestMethod.GET)
@@ -104,7 +104,7 @@ public class OrderLinesController extends BaseCrudController<OrderLines>{
 		
 		modelMap.put("orderLines",orderLines);
 
-		return new ModelAndView(getViewFolder() + "/create",modelMap);
+		return new ModelAndView(getViewFolder() + "/properties",modelMap);
 	}
 
 

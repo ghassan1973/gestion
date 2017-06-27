@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
 <html>
 <jsp:include page="./../head.jsp" />
 

@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
 <script
 	src="${pageContext.request.contextPath}/static/js/jquery-2.2.2.min.js"></script>
 <script

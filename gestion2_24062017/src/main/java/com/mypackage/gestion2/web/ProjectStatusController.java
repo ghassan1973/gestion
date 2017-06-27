@@ -77,7 +77,7 @@ public class ProjectStatusController extends BaseCrudController<ProjectStatus>{
 
 				
 		
-		return new ModelAndView(getViewFolder() + "/create",modelMap);
+		return new ModelAndView(getViewFolder() + "/properties",modelMap);
 	}
 
 	@RequestMapping(value = "{id}/edit", method = RequestMethod.GET)
@@ -92,7 +92,7 @@ public class ProjectStatusController extends BaseCrudController<ProjectStatus>{
 		
 		modelMap.put("projectStatus",projectStatus);
 
-		return new ModelAndView(getViewFolder() + "/create",modelMap);
+		return new ModelAndView(getViewFolder() + "/properties",modelMap);
 	}
 
 

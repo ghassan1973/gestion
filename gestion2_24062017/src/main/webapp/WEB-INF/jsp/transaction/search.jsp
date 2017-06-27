@@ -3,9 +3,9 @@
 		style="background-color: #222; height: 100%;"
 		role="navigation" id="user-left-box">
 		<div
-			style="color: white; display: block; font-size: 14px; line-height: 14px; position: relative; transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms; margin-left: 0px; padding: 23px 0px 33px; font-family: &amp; amp; amp; amp; amp; amp; amp; amp; quot; Source Sans Pro&amp;amp; amp; amp; amp; amp; amp; amp; quot; , sans-serif; vertical-align: middle; text-align: center; font-weight: 600;">
+			style="color: white; display: block; font-size: 14px; line-height: 14px; position: relative; transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms; margin-left: 0px; padding: 23px 0px 33px; font-family: &amp; amp; amp; amp; amp; amp; amp; amp; quot; Source Sans Pro&amp;amp; amp; amp; amp; amp; amp; amp; quot; , sans-serif; vertical-align: middle; text-align: left; font-weight: 600;">
 			<!-- react-text: 65 -->
-			SÉLECTION DES FILTRES
+			Filter...
 			<!-- /react-text -->
 		</div>
 		<div class="profile-detail"

@@ -77,7 +77,7 @@ public class ModePaymentController extends BaseCrudController<ModePayment>{
 
 				
 		
-		return new ModelAndView(getViewFolder() + "/create",modelMap);
+		return new ModelAndView(getViewFolder() + "/properties",modelMap);
 	}
 
 	@RequestMapping(value = "{id}/edit", method = RequestMethod.GET)
@@ -92,7 +92,7 @@ public class ModePaymentController extends BaseCrudController<ModePayment>{
 		
 		modelMap.put("modePayment",modePayment);
 
-		return new ModelAndView(getViewFolder() + "/create",modelMap);
+		return new ModelAndView(getViewFolder() + "/properties",modelMap);
 	}
 
 

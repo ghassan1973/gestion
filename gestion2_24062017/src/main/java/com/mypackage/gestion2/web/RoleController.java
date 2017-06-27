@@ -82,7 +82,7 @@ public class RoleController extends BaseCrudController<Role>{
 				modelMap.put("all_permission",permissionService.listAll());
 				
 		
-		return new ModelAndView(getViewFolder() + "/create",modelMap);
+		return new ModelAndView(getViewFolder() + "/properties",modelMap);
 	}
 
 	@RequestMapping(value = "{id}/edit", method = RequestMethod.GET)
@@ -98,7 +98,7 @@ public class RoleController extends BaseCrudController<Role>{
 		
 		modelMap.put("role",role);
 
-		return new ModelAndView(getViewFolder() + "/create",modelMap);
+		return new ModelAndView(getViewFolder() + "/properties",modelMap);
 	}
 
 

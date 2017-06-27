@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <jsp:include page="./../head.jsp" />
@@ -8,16 +9,13 @@
 			<div class="row row-offcanvas row-offcanvas-left">
 				<jsp:include page="./../sidebar.jsp" />
 				<!-- Content-->
-				<div class="col-xs-12 col-sm-8 col-md-9 col-lg-10"
-					id="content-wrapper">
+				<div class="col-xs-12 col-sm-8 col-md-9 col-lg-12">
 					<div class="row">
 						<div class="col-lg-12 header-bar">
 							<ol class="breadcrumb">
 								<li><a href="${pageContext.request.contextPath}/home">Home</a></li>
-								<li><a href="${pageContext.request.contextPath}/product">Product</a></li>
 								<li class="active"><span>Product List</span></li>
 							</ol>
-							<h3>Product List</h3>
 						</div>
 					</div>
 					<div class="main-box">
@@ -27,16 +25,16 @@
 							<div class="form-group">
 								<div class="clearfix">
 									<div class="col-lg-3 padding-b-15">
-										<label class="small" for="ProductName">Product Name</label> <input
+										<label class="small" for="ProductName">Name</label> <input
 											id="product_name" type="text" class="form-control"
-											placeholder="Product Name" name="productName"
+											placeholder="Name" name="productName"
 											value="${search.productName}" />
 									</div>
 								</div>
 								<div class="col-lg-12">
-									<button type="submit" class="btn btn-success" id="search_btn">Seach</button>
-									<a href="${pageContext.request.contextPath}/product/create"
-										class="btn btn-info pull-right">Create Product</a>
+									<button type="submit" class="btn btn-success" id="search_btn">
+										<span class="glyphicon glyphicon-search"></span>&nbsp;
+									</button>
 								</div>
 							</div>
 						</form>
@@ -46,12 +44,14 @@
 								<thead>
 									<tr>
 										<th>#</th>
-										<th class="small">ProductName</th>
-										<th class="small">UnitPrice</th>
+										<th class="small">Name</th>
+										<th class="small">Unit Price</th>
 										<th class="small">Tva1</th>
 										<th class="small">Tva2</th>
-										<th>&nbsp;</th>
-										<th>&nbsp;</th>
+										<th colspan=2><a
+											href="${pageContext.request.contextPath}/product/create"
+											class="btn btn-info pull-right"><span
+											class="glyphicon glyphicon-plus"></span>&nbsp;</a></th>
 									</tr>
 								</thead>
 								<tbody>
@@ -62,15 +62,11 @@
 											<td>${item.unitPrice}</td>
 											<td>${item.tva1}</td>
 											<td>${item.tva2}</td>
-											<td>
+											<td colspan=2 align="right">
 												<p data-placement="top" data-toggle="tooltip" title="Edit">
 													<a class="btn btn-success btn-xs edit_product_link"
 														href="${pageContext.request.contextPath}/product/${item.productId}/edit"><span
 														class="glyphicon glyphicon-pencil"></span>&nbsp;</a>
-												</p>
-											</td>
-											<td>
-												<p data-placement="top" data-toggle="tooltip" title="Delete">
 													<a
 														class="btn btn-danger btn-xs delete_product_link delete_link"
 														data-title="Delete"

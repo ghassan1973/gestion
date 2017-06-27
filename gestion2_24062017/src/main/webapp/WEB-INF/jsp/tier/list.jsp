@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <jsp:include page="./../head.jsp" />
@@ -7,56 +8,32 @@
 		<div class="container-fluid">
 			<div class="row row-offcanvas row-offcanvas-left">
 				<jsp:include page="./../sidebar.jsp" />
+			    <jsp:include page="search.jsp" />
 				<!-- Content-->
-				<div class="col-xs-12 col-sm-8 col-md-9 col-lg-10"
-					id="content-wrapper">
+				<div class="col-xs-12 col-sm-8 col-md-9 col-lg-10">
 					<div class="row">
 						<div class="col-lg-12 header-bar">
 							<ol class="breadcrumb">
 								<li><a href="${pageContext.request.contextPath}/home">Home</a></li>
-								<li><a href="${pageContext.request.contextPath}/tier">Tier</a></li>
-								<li class="active"><span>Tier List</span></li>
+								<li class="active"><span>Tier</span></li>
 							</ol>
-							<h3>Tier List</h3>
 						</div>
 					</div>
 					<div class="main-box">
-						<form class="form-horizontal"
-							action="${pageContext.request.contextPath}/tier/search"
-							method="post">
-							<div class="form-group">
-								<div class="clearfix">
-									<div class="col-lg-3 padding-b-15">
-										<label class="small" for="TierName">Tier Name</label> <input
-											id="tier_name" type="text" class="form-control"
-											placeholder="Tier Name" name="tierName"
-											value="${search.tierName}" />
-									</div>
-									<div class="col-lg-3 padding-b-15">
-										<label class="small" for="Type">Type</label> <input id="type"
-											type="text" class="form-control" placeholder="Type"
-											name="type" value="${search.type}" />
-									</div>
-								</div>
-								<div class="col-lg-12">
-									<button type="submit" class="btn btn-success" id="search_btn">Seach</button>
-									<a href="${pageContext.request.contextPath}/tier/create"
-										class="btn btn-info pull-right">Create Tier</a>
-								</div>
-							</div>
-						</form>
 						<div class="table-responsive">
 							<table id="mytable"
 								class="table table-striped table-hover table-row checkboxNew">
 								<thead>
 									<tr>
 										<th>#</th>
-										<th class="small">TierName</th>
+										<th class="small">Name</th>
 										<th class="small">Mobile</th>
 										<th class="small">Phone</th>
 										<th class="small">Email</th>
-										<th>&nbsp;</th>
-										<th>&nbsp;</th>
+										<th colspan=2><a
+											href="${pageContext.request.contextPath}/tier/create"
+											class="btn btn-info pull-right"><span
+												class="glyphicon glyphicon-plus"></span>&nbsp;</a></th>
 									</tr>
 								</thead>
 								<tbody>
@@ -67,15 +44,11 @@
 											<td>${item.mobile}</td>
 											<td>${item.phone}</td>
 											<td>${item.email}</td>
-											<td>
+											<td colspan=2 align="right">
 												<p data-placement="top" data-toggle="tooltip" title="Edit">
 													<a class="btn btn-success btn-xs edit_tier_link"
 														href="${pageContext.request.contextPath}/tier/${item.tierId}/edit"><span
 														class="glyphicon glyphicon-pencil"></span>&nbsp;</a>
-												</p>
-											</td>
-											<td>
-												<p data-placement="top" data-toggle="tooltip" title="Delete">
 													<a
 														class="btn btn-danger btn-xs delete_tier_link delete_link"
 														data-title="Delete"

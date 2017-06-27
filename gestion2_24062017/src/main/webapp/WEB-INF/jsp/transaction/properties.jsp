@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
@@ -44,10 +45,10 @@
 
 											<div class="col-md-6">
 												<div class="form-group" id="order_dropdown_parent">
-													<label for="sel_order" class="small">Order</label> <select
+													<label for="sel_order" class="small">Order <span class="obligatoire" style="color: red">*</span></label> <select
 														class="form-control custom" name="order_rel"
-														id="order_dropdown">
-														<option vlue="0"></option>
+														id="order_dropdown" autofocus required>
+														<option value="0"></option>
 														<c:forEach items="${all_order}" var="item">
 															<option value="${item.orderId}"
 																${fn:contains(transaction.order, item) ? 'selected' : ''}>${item.orderName}</option>
@@ -72,7 +73,7 @@
 												<div class="form-group">
 													<label for="txt_amount" class="small">Amount <span
 														class="obligatoire" style="color: red">*</span></label> <input
-														type="text" name="Amount" class="form-control"
+														type="text" step=0.01 name="Amount" class="form-control"
 														id="amount_input" placeholder="Enter Amount"
 														value="${transaction.amount}" required
 														pattern="[-+]?[0-9]*[.,]?[0-9]*[.]?[0-9]+" />
@@ -108,7 +109,7 @@
 										<div class="col-lg-12">
 											<div class="col-md-6">
 												<div class="form-group" id="mode_dropdown_parent">
-													<label for="sel_mode" class="small">Mode Payment</label> <select
+													<label for="sel_mode" class="small">Mode Payment <span class="obligatoire" style="color: red">*</span></label> <select
 														required class="form-control custom"
 														name="modePayment_rel" id="mode_dropdown">
 														<option></option>

@@ -77,7 +77,7 @@ public class CurrencyController extends BaseCrudController<Currency>{
 
 				
 		
-		return new ModelAndView(getViewFolder() + "/create",modelMap);
+		return new ModelAndView(getViewFolder() + "/properties",modelMap);
 	}
 
 	@RequestMapping(value = "{id}/edit", method = RequestMethod.GET)
@@ -92,7 +92,7 @@ public class CurrencyController extends BaseCrudController<Currency>{
 		
 		modelMap.put("currency",currency);
 
-		return new ModelAndView(getViewFolder() + "/create",modelMap);
+		return new ModelAndView(getViewFolder() + "/properties",modelMap);
 	}
 
 

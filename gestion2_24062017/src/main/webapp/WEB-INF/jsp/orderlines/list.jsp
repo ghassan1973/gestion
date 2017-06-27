@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <jsp:include page="./../head.jsp" />
@@ -8,16 +9,13 @@
 			<div class="row row-offcanvas row-offcanvas-left">
 				<jsp:include page="./../sidebar.jsp" />
 				<!-- Content-->
-				<div class="col-xs-12 col-sm-8 col-md-9 col-lg-10"
-					id="content-wrapper">
+				<div class="col-xs-12 col-sm-8 col-md-9 col-lg-12">
 					<div class="row">
 						<div class="col-lg-12 header-bar">
 							<ol class="breadcrumb">
 								<li><a href="${pageContext.request.contextPath}/home">Home</a></li>
-								<li><a href="${pageContext.request.contextPath}/orderLines">OrderLines</a></li>
-								<li class="active"><span>OrderLines List</span></li>
+								<li class="active"><span>Order Lines List</span></li>
 							</ol>
-							<h3>OrderLines List</h3>
 						</div>
 					</div>
 					<div class="main-box">
@@ -27,16 +25,16 @@
 							<div class="form-group">
 								<div class="clearfix">
 									<div class="col-lg-3 padding-b-15">
-										<label class="small" for="OrderLinesName">Order Lines
-											Name</label> <input id="order_lines_name" type="text"
-											class="form-control" placeholder="Order Lines Name"
-											name="orderLinesName" value="${search.orderLinesName}" />
+										<label class="small" for="OrderLinesName"> Name</label> <input
+											id="order_lines_name" type="text" class="form-control"
+											placeholder="Name" name="orderLinesName"
+											value="${search.orderLinesName}" />
 									</div>
 								</div>
 								<div class="col-lg-12">
-									<button type="submit" class="btn btn-success" id="search_btn">Seach</button>
-									<a href="${pageContext.request.contextPath}/orderLines/create"
-										class="btn btn-info pull-right">Create OrderLines</a>
+									<button type="submit" class="btn btn-success" id="search_btn">
+										<span class="glyphicon glyphicon-search"></span>&nbsp;
+									</button>
 								</div>
 							</div>
 						</form>
@@ -46,13 +44,15 @@
 								<thead>
 									<tr>
 										<th>#</th>
-										<th class="small">OrderLinesName</th>
+										<th class="small">Name</th>
 										<th class="small">Quantity</th>
-										<th class="small">UnitPrice</th>
+										<th class="small">Unit Price</th>
 										<th class="small">Discount</th>
 										<th class="small">Comment</th>
-										<th>&nbsp;</th>
-										<th>&nbsp;</th>
+										<th colspan=2><a
+											href="${pageContext.request.contextPath}/orderLines/create"
+											class="btn btn-info pull-right"><span
+												class="glyphicon glyphicon-plus"></span>&nbsp;</a></th>
 									</tr>
 								</thead>
 								<tbody>
@@ -63,19 +63,12 @@
 											<td>${item.quantity}</td>
 											<td>${item.unitPrice}</td>
 											<td>${item.discount}</td>
-											<td>${item.product}</td>
-											<td>${item.order}</td>
 											<td>${item.comment}</td>
-											<td>
+											<td colspan=2 align="right">
 												<p data-placement="top" data-toggle="tooltip" title="Edit">
 													<a class="btn btn-success btn-xs edit_orderLines_link"
 														href="${pageContext.request.contextPath}/orderLines/${item.orderLinesId}/edit"><span
-														class="glyphicon glyphicon-pencil"></span>&nbsp;</a>
-												</p>
-											</td>
-											<td>
-												<p data-placement="top" data-toggle="tooltip" title="Delete">
-													<a
+														class="glyphicon glyphicon-pencil"></span>&nbsp;</a> <a
 														class="btn btn-danger btn-xs delete_orderLines_link delete_link"
 														data-title="Delete"
 														href="${pageContext.request.contextPath}/orderLines/${item.orderLinesId}/delete"><span

@@ -77,7 +77,7 @@ public class FamilyTierController extends BaseCrudController<FamilyTier>{
 
 				
 		
-		return new ModelAndView(getViewFolder() + "/create",modelMap);
+		return new ModelAndView(getViewFolder() + "/properties",modelMap);
 	}
 
 	@RequestMapping(value = "{id}/edit", method = RequestMethod.GET)
@@ -92,7 +92,7 @@ public class FamilyTierController extends BaseCrudController<FamilyTier>{
 		
 		modelMap.put("familyTier",familyTier);
 
-		return new ModelAndView(getViewFolder() + "/create",modelMap);
+		return new ModelAndView(getViewFolder() + "/properties",modelMap);
 	}
 
 

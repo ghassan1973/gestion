@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
@@ -12,7 +13,7 @@
 				<jsp:include page="./../sidebar.jsp" />
 				<!-- Content-->
 				<div class="col-xs-12 col-sm-8 col-md-9 col-lg-12">
-					<div class="row">
+					<di						v class="row">
 						<div class="col-lg-12 header-bar">
 							<ol class="breadcrumb">
 								<li><a href="${pageContext.request.contextPath}/home">Home</a></li>
@@ -36,8 +37,7 @@
 														class="obligatoire" style="color: red">*</span></label> <input
 														type="text" name="ProjectName" class="form-control"
 														id="project_name_input" placeholder="Enter Project Name"
-														value="${project.projectName}" autofocus required
-														 />
+														value="${project.projectName}" autofocus required/>
 												</div>
 											</div>
 
@@ -45,7 +45,7 @@
 												<div class="form-group" id="region_dropdown_parent">
 													<label for="sel_region" class="small">Region</label> <select
 														class="form-control custom" name="region_rel"
-														id="region_dropdown">
+														id="region_dropdown" autofocus required>
 														<option></option>
 														<c:forEach items="${all_region}" var="item">
 															<option value="${item.regionId}"
@@ -60,7 +60,7 @@
 												<div class="form-group" id="projectType_dropdown_parent">
 													<label for="sel_projecttype" class="small">Type</label> <select
 														class="form-control custom" name="projectType_rel"
-														id="projectType_dropdown">
+														id="projectType_dropdown" autofocus required>
 														<option></option>
 														<c:forEach items="${all_projectType}" var="item">
 															<option value="${item.projectTypeId}"
