@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <jsp:include page="./../head.jsp" />
@@ -8,7 +8,7 @@
 		<div class="container-fluid">
 			<div class="row row-offcanvas row-offcanvas-left">
 				<jsp:include page="./../sidebar.jsp" />
-			    <jsp:include page="search.jsp" />
+				<jsp:include page="search.jsp" />
 				<!-- Content-->
 				<div class="col-xs-12 col-sm-8 col-md-9 col-lg-10">
 					<div class="row">
@@ -34,7 +34,8 @@
 										<th class="small">In/Out</th>
 										<th colspan=2><a
 											href="${pageContext.request.contextPath}/transaction/create"
-											class="btn btn-info pull-right">+</a></th>
+											class="btn btn-info pull-right"><span
+												class="glyphicon glyphicon-plus"></span>&nbsp;</a></th>
 									</tr>
 								</thead>
 								<tbody>
@@ -51,8 +52,7 @@
 												<p data-placement="top" data-toggle="tooltip" title="Edit">
 													<a class="btn btn-success btn-xs edit_transaction_link"
 														href="${pageContext.request.contextPath}/transaction/${item.transactionId}/edit"><span
-														class="glyphicon glyphicon-pencil"></span>&nbsp;</a>
-													<a
+														class="glyphicon glyphicon-pencil"></span>&nbsp;</a> <a
 														class="btn btn-danger btn-xs delete_transaction_link delete_link"
 														data-title="Delete"
 														href="${pageContext.request.contextPath}/transaction/${item.transactionId}/delete"><span

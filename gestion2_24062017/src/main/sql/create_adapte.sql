@@ -3,6 +3,7 @@
 
 -- OK CREATE DATABASE app_gestion2 DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
 -- KO CREATE SCHEMA `app_gestion2` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin ;
+create database app_gestion2;
 
 use app_gestion2;
 
@@ -101,5 +102,5 @@ PRIMARY KEY (`request_id`)
 insert into tbl_user(first_name,last_name,email,password) values ('Admin','User','admin@example.com','admin');
 
 
- CREATE OR replace VIEW reportallout AS SELECT tr.in_out, p.project_name,t.tier_name,o.order_name,format(COALESCE(o.amount,0),2) AS Credit,format(COALESCE(sum(tr.amount),0),2) AS Debt, format(COALESCE(o.amount,0)-sum(COALESCE(tr.amount,0)),2) AS Balance,tr.date, p.project_id, t.tier_id,o.order_id FROM tbl_project as p, tbl_tier as t,tbl_family_tier as ft, tbl_order as o , tbl_transaction as tr where tr.order_id=o.order_id and tr.in_out='Out (Payment)' and ft.family_tier_id=t.family_tier_id and p.project_id=o.project_id and t.tier_id=o.tier_id group by  o.order_id;
- CREATE OR replace VIEW reportallin AS SELECT tr.in_out,p.project_name,t.tier_name,o.order_name, format(COALESCE(sum(tr.amount),0),2) AS Credit,format(COALESCE(o.amount,0),2) AS Debt, format(sum(COALESCE(tr.amount,0))-COALESCE(o.amount,0),2) AS Balance,tr.date, p.project_id, t.tier_id,o.order_id FROM tbl_project as p, tbl_tier as t,tbl_family_tier as ft, tbl_order as o, tbl_transaction as tr where in_out='In (Take)' and ft.family_tier_id=t.family_tier_id and tr.order_id=o.order_id and p.project_id=o.project_id and t.tier_id=o.tier_id group by o.order_name;
+ CREATE OR replace VIEW reportallout AS SELECT tr.in_out, p.project_name,t.tier_name,o.order_name,format(COALESCE(o.amount,0),2) AS Credit,format(COALESCE(sum(tr.amount),0),2) AS Debt, format(COALESCE(o.amount,0)-sum(COALESCE(tr.amount,0)),2) AS Balance,tr.date, p.project_id, t.tier_id,o.order_id FROM tbl_project as p, tbl_tier as t,tbl_family_tier as ft, tbl_order as o , tbl_transaction as tr where tr.order_id=o.order_id and tr.in_out='Out (Payment)' and ft.family_tier_id=t.familyTier_id and p.project_id=o.project_id and t.tier_id=o.tier_id group by  o.order_id;
+ CREATE OR replace VIEW reportallin AS SELECT tr.in_out,p.project_name,t.tier_name,o.order_name, format(COALESCE(sum(tr.amount),0),2) AS Credit,format(COALESCE(o.amount,0),2) AS Debt, format(sum(COALESCE(tr.amount,0))-COALESCE(o.amount,0),2) AS Balance,tr.date, p.project_id, t.tier_id,o.order_id FROM tbl_project as p, tbl_tier as t,tbl_family_tier as ft, tbl_order as o, tbl_transaction as tr where in_out='In (Take)' and ft.family_tier_id=t.familyTier_id and tr.order_id=o.order_id and p.project_id=o.project_id and t.tier_id=o.tier_id group by o.order_name;

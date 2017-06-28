@@ -12,16 +12,13 @@
 			<div class="row row-offcanvas row-offcanvas-left">
 				<jsp:include page="./../sidebar.jsp" />
 				<!-- Content-->
-				<div class="col-xs-12 col-sm-8 col-md-9 col-lg-10"
-					id="content-wrapper">
+				<div class="col-xs-12 col-sm-8 col-md-9 col-lg-12">
 					<div class="row">
 						<div class="col-lg-12 header-bar">
 							<ol class="breadcrumb">
 								<li><a href="${pageContext.request.contextPath}/home">Home</a></li>
-								<li><a href="${pageContext.request.contextPath}/user">User</a></li>
-								<li class="active"><span>Create User</span></li>
+								<li class="active"><span>User</span></li>
 							</ol>
-							<h3>Create User</h3>
 						</div>
 					</div>
 					<div class="main-box">
